@@ -1,0 +1,47 @@
+<div class="col-md-3 mobile-compares-<%= mobile.id %>">
+  <div class="close1" onclick="remove_compares_item(this)" id=<%= mobile.id %>> </div>
+  <ul>
+    <li class="compares-header">
+      <ul>
+        <li class="compares-image">
+          <%= link_to mobile_path(mobile) do %>
+           <%= image_tag mobile.avatar.url %>
+          <% end %>
+        </li>
+        <li><h3><%= link_to mobile.name, mobile_path(mobile) %></h3></li>
+        <li><h3><%= number_with_delimiter mobile.price, delimiter: "," %>&nbsp<%= Settings.currency.vnd %></h3></li>
+        <li><%= rating_for mobile, "quality", star: Settings.rating.star, cancel: false, disable_after_rate: true %></li>
+      </ul>
+    </li>
+    <li>
+      <table class="table">
+        <tr>
+          <td><%= mobile.resolution %>&nbspPixels</td>
+        </tr>
+        <tr>
+          <td><%= t "views.mobiles.show.height" %>:&nbsp<%= mobile.height %>mm -
+          <%= t "views.mobiles.show.weight" %>:&nbsp<%= mobile.width %>mm</td>
+        </tr>
+        <tr>
+          <td><%= mobile.front_camera %>&nbspMP</td>
+        </tr>
+        <tr>
+          <td><%= mobile.behind_camera %>&nbspMP</td>
+        </tr>
+        <tr>
+          <td><%= mobile.ram %></td>
+        </tr>
+        <tr>
+          <td><%= mobile.battery %>&nbspmAh</td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      <%= form_for :cart, url: {controller: :carts, action: :create}, remote: true do |f|%>
+        <%= f.hidden_field :mobile_id, value: mobile.id %>
+        <%= f.hidden_field :quantity, value: Settings.default_quantity.quantity %>
+        <%= f.submit t("views.mobiles.show.add_to_cart"), class: "btn btn-primary"%>
+      <% end %>
+    </li>
+  </ul>
+</div>

@@ -38,6 +38,10 @@
 //= require back-to-top
 //= require rating
 //= require social-share-button
+//= require jquery.easy-autocomplete.min
+//= require search
+//= require compares
+//= require language
 
 function getCookie(cname) {
   var name = cname + '=';

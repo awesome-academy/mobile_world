@@ -22,6 +22,14 @@ contact:
   call_to_complain: 1800.1062
   call_for_warranty: 1800.1064
   technical_assistance: 1800.1763
+litmited_compare:
+  item: 3
+litmited_search:
+  item: 4
+rating:
+  star: 10
+default_quantity:
+  quantity: 1
 users:
   -
     email: normal_user@gmail.com

@@ -1,7 +1,11 @@
 $('.show-check-mobile').html("");
 <% if @shop_mobiles.present? %>
   <% @shop_mobiles.each do |shop_mobile| %>
-    $('.show-check-mobile').append("<ul><%= j render partial: 'shop_mobile', collection: shop_mobile %></ul>");
+    <% if shop_mobile.present? %>
+      $('.show-check-mobile').append("<ul><%= j render partial: 'shop_mobile', collection: shop_mobile %></ul>");
+    <% else %>
+      $('.show-check-mobile').html("<ul><%= t "views.shops.create.error_shop" %></ul>");
+    <% end %>
   <% end %>
 <% else %>
   alert(I18n.t("views.shops.create.error_check"));

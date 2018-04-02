@@ -11,6 +11,6 @@
     <li><span class="cost">
       <input id=<%= mobile.id %> class="quantity form-control order-quantity-<%= mobile.id %>" type="number" min="1" style="width: 150px" value="<%= find_exits_item(@cart, mobile.id.to_s)["quantity"] %>"></span>
     </li>
-    <li><span class="cost price"><%= mobile.price %>&nbspVND</span></li>
+    <li><span class="cost price"><%= mobile.price %>&nbsp<%= Settings.currency.vnd %></span></li>
   <div class="clearfix"> </div>
 </ul>

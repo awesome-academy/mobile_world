@@ -20,14 +20,15 @@ en:
     load_comment: "Can't find comment"
     login_history: "Please login to access this page."
     no_color: "Can not find the color of some mobiles"
+    add_compare_error: "Your just compare litmited 3 mobiles"
   mailers:
     order_mailer:
       order_success: "Order Successful"
   layouts:
     header:
       language: "Language"
-      english: "English"
-      vietnamese: "Vietnamese"
+      en: "English"
+      vi: "Vietnamese"
       card: "Empty Cart"
       mobile_world: "Mobile World"
       search: "Search"
@@ -117,6 +118,7 @@ en:
         recommend: "Similar product"
         login_to_rate: "Please login to rating"
         customer_rating: "Customer Rating"
+        compare_now: "Compare two mobile"
     comments:
       comment:
         ago: "ago"
@@ -131,6 +133,7 @@ en:
         mobile_not_exits: "Mobile not exit"
       create:
         error_check: "Can't find shop in your address, please find in another address!"
+        error_shop: "Can't find shop have this mobile, please find in another address!"
     order_mailer:
       order_successful:
         order_success: "Your order is successfully"
@@ -139,3 +142,6 @@ en:
         hi: "Hi"
         order_details: "Your order details is:"
         cart_have: "Cart have"
+    compares:
+      index:
+        add_compare_mobiles: "Add mobile to compares"

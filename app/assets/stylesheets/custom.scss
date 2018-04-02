@@ -269,3 +269,22 @@ a.replies {
   }
 }
 
+.cart-header {
+  img {
+    width: 100px;
+  }
+}
+
+.compares-header {
+  display: block;
+  height: 370px;
+  margin-bottom: 30px;
+    .compares-image img {
+      width: 205px;
+      height: 256px;
+    }
+}
+.compares-table {
+  margin-top: 20px;
+  border: 1px solid $gray;
+}

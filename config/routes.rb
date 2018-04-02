@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :orders, only: [:new, :create]
     get "/search" => "mobiles#search"
     resources :shops, only: :create
+    resources :compares, only: [:index, :create, :destroy]
+    get "compares/create"
+    get "/searchs" => "compares#searchs"
     post "/comment_children" => "comment_childrens#create"
     patch "/advertisement" => "advertisements#update"
     get "/orders/history" => "orders#history"

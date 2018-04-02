@@ -39,6 +39,7 @@ gem "daemons", "~> 1.2", ">= 1.2.5"
 gem "whenever", require: false
 gem "delayed_job_active_record"
 gem "social-share-button"
+gem "ransack"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

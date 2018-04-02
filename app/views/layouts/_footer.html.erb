@@ -37,15 +37,15 @@
     <div class="footer-top">
       <div class="col-md-6 footer-left">
 
-        <select class="dropdown drop" onchange="location = this.value;">
-          <option value="" class="label"><%= t ".language" %></option>
-          <option value="/en">
-            <%= t ".english" %>
-          </option>
-          <option value="/vi">
-            <%= t ".vietnamese"%>
-          </option>
-        </select>
+      <select class="dropdown drop locale">
+        <option value="" class="label"><%= t "layouts.header.#{cookies["locale"].to_s}" %></option>
+        <option value="en">
+          <%= t "layouts.header.en" %>
+        </option>
+        <option value="vi">
+          <%= t "layouts.header.vi"%>
+        </option>
+      </select>
       </div>
       <div class="col-md-6 footer-right">
         <p>© 2015 Luxury Watches. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>

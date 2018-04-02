@@ -1,0 +1,43 @@
+<div class= "container">
+  <%= form_with url: compares_path, local: true, method: :get, 
+    html: { class: "navbar-form navbar-left fix-form-position pull-right" } do |form| %>
+    <h4><%= t "views.compares.index.add_compare_mobiles" %>:</h4>
+    <%= form.text_field :q, placeholder: t("layouts.header.search"), 
+      data: { behavior: "autocomplete" }, class: "form-control search-input" %>
+  <% end %>
+</div>
+<div class="row compares-table">
+  <div class="col-md-3">
+    <ul>
+      <li class="compares-header"></li>
+      <li>
+        <table class="table">
+          <tr>
+            <td><b><%= t "views.mobiles.show.resolution" %></b></td>
+          </tr>
+          <tr>
+            <td><b><%= t "views.mobiles.show.size" %></b></td>
+          </tr>
+          <tr>
+            <td><b><%= t "views.mobiles.show.front_camera" %></b></td>
+          </tr>
+          <tr>
+            <td><b><%= t "views.mobiles.show.behind_camera" %></b></td>
+          </tr>
+          <tr>
+            <td><b><%= t "views.mobiles.show.ram" %></b></td>
+          </tr>
+          <tr>
+            <td><b><%= t "views.mobiles.show.battery" %></b></td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+  <%= render partial: "compares/mobile", collection: @mobiles %>
+</div>
+<div id="position-cart">
+  <% if @cart.present? %>
+    <%= render partial: "shared/cart", locals: {cart: @cart}%>
+  <% end %>
+</div>
